@@ -29,8 +29,8 @@ def read_root():
 @app.get("/users", response_class=HTMLResponse)
 def read_root():
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     result = []
@@ -45,8 +45,8 @@ def read_root():
 @app.get("/products", response_class=HTMLResponse)
 def read_root():
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     
@@ -59,8 +59,8 @@ def read_root():
 @app.get("/cart", response_class=HTMLResponse)
 def read_root():
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     
@@ -74,8 +74,8 @@ def read_root():
 @app.get("/purchases", response_class=HTMLResponse)
 def read_root():
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     
@@ -89,8 +89,8 @@ def read_root():
 @app.post("/users/add", response_class=HTMLResponse)
 def add_user(name: str = Form(...), email: str = Form(...), password: str = Form(...)):
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     with connection.cursor() as cursor:
@@ -112,8 +112,8 @@ def add_user(name: str = Form(...), email: str = Form(...), password: str = Form
 @app.post("/cart/add", response_class=HTMLResponse)
 def add_cart(user_key: int = Form(...), item_id: str = Form(...), quantity: str = Form(...)):
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     query = f"SELECT`items` FROM `Cart_TAB` WHERE `customer_id`={user_key}"
@@ -137,8 +137,8 @@ def add_product(name: str = Form(...), price: str = Form(...), img_url: str = Fo
     query = "INSERT INTO `Product_Master_TAB`(`name`, `price`, `img_url`, `type`, `brand`) VALUES (%s,%s,%s,%s,%s)"
 
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     
@@ -158,8 +158,8 @@ def add_purchase(customer_id: int = Form(...), items: str = Form(...)):
     db_ids = []
     
     connection = connect(host='localhost',
-                             user='root',
-                             password='root',
+                             user='[SUPER_SECRET_CREDENTIALS]',
+                             password='[SUPER_SECRET_CREDENTIALS]',
                              database='MAIN_DB',
                              cursorclass=cursors.DictCursor)
     
