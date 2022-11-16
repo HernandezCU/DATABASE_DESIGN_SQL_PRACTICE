@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  table, th, td {
+    border:1px solid black;
+  }
+  </style>
+  <body>
+
+    <h2>All Products in Database</h2>
+
+    <table style="width:100%">
+      <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Type</th>
+        <th>Brand</th>
+      </tr>
+      {%for item in items%}
+        <tr>
+            <td>{{item.p_id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.img_url}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.brand}}</td>
+        </tr>
+      {%endfor%}
+    </table>
+    <button onclick="window.location.href= '/'">Back</button> 
+  </body>
+</html>

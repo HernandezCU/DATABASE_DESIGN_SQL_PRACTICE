@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  table, th, td {
+    border:1px solid black;
+  }
+  </style>
+  <body>
+
+    <h2>All Users in Database</h2>
+
+    <table style="width:100%">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+      {%for user in users%}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+        </tr>
+      {%endfor%}
+    </table>
+    <button onclick="window.location.href= '/'">Back</button> 
+  </body>
+</html>

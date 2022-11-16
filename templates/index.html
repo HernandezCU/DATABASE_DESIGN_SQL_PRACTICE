@@ -1,0 +1,72 @@
+<body>
+    <div id="add_user">
+        <h3>Add User</h3>
+        <form action="/users/add" enctype="multipart/form-data" method="post">
+            <input type="text" id="name" placeholder="Name" name="name" required/>
+            <br/>
+            <br/>
+            <input type="text" id="email" placeholder="Email" name="email" required/>
+            <br/>
+            <br/>
+            <input type="password" id="password" placeholder="Password" name="password" required/>
+            <br/>
+            <br/>
+            <button class="add-user-button" type="submit">Add User</button>
+        </form> 
+        <button onclick="window.location.href= '/users'">View All Users</button>  
+        <hr>
+        <br>
+        <hr>
+        <h3>Add Item</h3>
+        <form action="/products/add" enctype="multipart/form-data" method="post">
+            <input type="text" id="name" placeholder="Name" name="name" required/>
+            <br/>
+            <br/>
+            <input type="string" id="price" placeholder="Price" name="price" required/>
+            <br/>
+            <br/>
+            <input type="text" id="img_url" placeholder="Image URL" name="img_url" required/>
+            <br/>
+            <br/>
+            <input type="text" id="type" placeholder="Item Type" name="type" required/>
+            <br/>
+            <br/>
+            <input type="text" id="brand" placeholder="Item Brand" name="brand" required/>
+            <br/>
+            <br/>
+            <button class="add-item-button" type="submit">Add Item</button>
+        </form>  
+        <button onclick="window.location.href= '/products'">View All Items</button>  
+        <hr>
+        <br>
+        <hr>
+        <h3>Add To Cart</h3>
+        <form action="/cart/add" enctype="multipart/form-data" method="post">
+            <input type="number" id="user_key" placeholder="UserID" name="user_key" required/>
+            <br/>
+            <br/>
+            <input type="number" id="item_id" placeholder="ItemID" name="item_id" required/>
+            <br/>
+            <br/>
+            <input type="number" id="quantity" placeholder="Quantity" name="quantity" required/>
+            <br/>
+            <br/>
+            <button class="add-item-button" type="submit">Add Item</button>
+        </form>  
+        <button onclick="window.location.href= '/cart'">View All Carts</button>  
+        <hr>
+        <br>
+        <hr>
+        <h3>Add a Purchase</h3>
+        <form action="/purchases/add" enctype="multipart/form-data" method="post">
+            <input type="number" id="customer_id" placeholder="UserID" name="customer_id" required/>
+            <br/>
+            <br/>
+            <label><b>Item, Quantity (Separate items with new lines)</b></label>
+            <textarea type="text" id="items" placeholder="Items" name="items" required></textarea>
+            <br/>
+            <br/>
+            <button class="add-purchase-button" type="submit">Add Purchase</button>
+        </form>  
+        <button onclick="window.location.href= '/purchases'">View All Purchases</button>  
+</body>

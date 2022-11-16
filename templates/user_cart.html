@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  table, th, td {
+    border:1px solid black;
+  }
+  </style>
+  <body>
+
+    <h2>All Carts in Database</h2>
+
+    <table style="width:100%">
+      <tr>
+        <th>Customer ID</th>
+        <th>Items</th>
+      </tr>
+      {%for cart in carts%}
+        <tr>
+            <td>{{cart.customer_id}}</td>
+            <td>{{cart['items']}}</td>
+        </tr>
+      {%endfor%}
+    </table>
+    <button onclick="window.location.href= '/'">Back</button> 
+  </body>
+</html>

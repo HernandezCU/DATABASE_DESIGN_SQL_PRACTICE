@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <style>
+  table, th, td {
+    border:1px solid black;
+  }
+  </style>
+  <body>
+
+    <h2>All Purchases in Database</h2>
+
+    <table style="width:100%">
+      <tr>
+        <th>Purchase ID</th>
+        <th>Customer ID</th>
+        <th>Items</th>
+      </tr>
+      {%for purchase in purchases%}
+        <tr>
+            <td>{{purchase.purchase_id}}</td>
+            <td>{{purchase.customer_id}}</td>
+            <td>{{purchase['items']}}</td
+        </tr>
+      {%endfor%}
+    </table>
+    <button onclick="window.location.href= '/'">Back</button> 
+  </body>
+</html>
